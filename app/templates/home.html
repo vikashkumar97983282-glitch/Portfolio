@@ -1,7 +1,87 @@
 {% extends 'base.html' %}
 
-{% block title %} Home {% endblock %}
+{% block title %}Home | Portfolio{% endblock %}
 
 {% block content %}
-<h1>this is Home page</h1>
+
+<section class="hero-section">
+
+    <div class="hero-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+
+            <p class="hero-small-title">
+                WELCOME TO MY PORTFOLIO
+            </p>
+
+            <h1>
+                Hi, I'm
+                <span>Vikash Kumar Sharma</span>
+            </h1>
+
+            <h2>
+                AI / Machine Learning Engineer
+            </h2>
+
+            <p class="hero-description">
+                I build intelligent solutions using Machine Learning,
+                Artificial Intelligence and Python. I enjoy turning
+                data and ideas into practical, data-driven applications.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('project.project') }}"
+                   class="btn primary-btn">
+                    View My Projects
+                </a>
+
+                <a href="{{ url_for('contact.contact') }}"
+                   class="btn secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image-container">
+
+            <div class="image-circle">
+
+                <img src="{{ url_for('static', filename='images/vks.jpeg') }}"
+                     alt="Vikash Kumar Sharma">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT INTRO -->
+<section class="home-intro">
+
+    <p class="section-label">
+        WHAT I DO
+    </p>
+
+    <h2>
+        Turning Ideas Into
+        <span>Intelligent Solutions</span>
+    </h2>
+
+    <p>
+        I work with Python, Machine Learning, Flask and data-driven
+        technologies to create practical applications and intelligent
+        solutions.
+    </p>
+
+</section>
+
 {% endblock %}

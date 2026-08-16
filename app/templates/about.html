@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block title %}About | Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="page-section about-page">
+
+    <!-- Page Heading -->
+    <div class="about-header">
+
+        <p class="section-label">ABOUT ME</p>
+
+        <h1>
+            Turning Ideas Into
+            <span>Intelligent Solutions</span>
+        </h1>
+
+        <p class="about-intro">
+            I am an aspiring AI and Machine Learning Engineer
+            passionate about building practical, intelligent,
+            and data-driven applications using Python and
+            modern technologies.
+        </p>
+
+    </div>
+
+
+    <!-- About Content -->
+    <div class="about-grid">
+
+        <!-- Introduction -->
+        <div class="content-card about-card">
+
+            <h2>Who I Am</h2>
+
+            <p>
+                I am a passionate technology enthusiast with a strong
+                interest in Artificial Intelligence, Machine Learning,
+                Python development, and software engineering.
+            </p>
+
+            <p>
+                I enjoy understanding real-world problems and using
+                programming, data, and machine learning techniques
+                to create useful solutions.
+            </p>
+
+            <p>
+                My goal is to continuously improve my technical skills
+                and develop applications that are simple, reliable,
+                and useful in real-world situations.
+            </p>
+
+        </div>
+
+
+        <!-- Career Objective -->
+        <div class="content-card about-card">
+
+            <h2>My Objective</h2>
+
+            <p>
+                My objective is to build a strong career in Artificial
+                Intelligence and Machine Learning by working on
+                meaningful projects and continuously learning new
+                technologies.
+            </p>
+
+            <p>
+                I am particularly interested in developing machine
+                learning applications, predictive systems, and
+                intelligent web applications using Python.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- What I Work With -->
+    <div class="about-section">
+
+        <p class="section-label">WHAT I WORK WITH</p>
+
+        <h2>Technical Interests</h2>
+
+        <div class="about-skills">
+
+            <div class="content-card interest-card">
+                <div class="interest-icon">🐍</div>
+
+                <h3>Python</h3>
+
+                <p>
+                    Developing applications, automation scripts,
+                    data processing solutions, and machine learning
+                    projects using Python.
+                </p>
+            </div>
+
+
+            <div class="content-card interest-card">
+                <div class="interest-icon">🤖</div>
+
+                <h3>Machine Learning</h3>
+
+                <p>
+                    Exploring predictive models, data analysis,
+                    classification, regression, and practical
+                    machine learning applications.
+                </p>
+            </div>
+
+
+            <div class="content-card interest-card">
+                <div class="interest-icon">🌐</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Building web applications using Flask,
+                    HTML, CSS, and other modern web technologies.
+                </p>
+            </div>
+
+
+            <div class="content-card interest-card">
+                <div class="interest-icon">📊</div>
+
+                <h3>Data & Analytics</h3>
+
+                <p>
+                    Working with data to discover useful patterns,
+                    generate insights, and support data-driven
+                    decisions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Strengths -->
+    <div class="about-section">
+
+        <p class="section-label">MY STRENGTHS</p>
+
+        <h2>What I Bring</h2>
+
+        <div class="strength-grid">
+
+            <div class="content-card strength-card">
+                <h3>Problem Solving</h3>
+
+                <p>
+                    I enjoy breaking complex problems into smaller
+                    and manageable parts and finding practical solutions.
+                </p>
+            </div>
+
+
+            <div class="content-card strength-card">
+                <h3>Continuous Learning</h3>
+
+                <p>
+                    I believe technology is constantly evolving, so
+                    I continuously learn new concepts, tools, and
+                    technologies.
+                </p>
+            </div>
+
+
+            <div class="content-card strength-card">
+                <h3>Project Based Learning</h3>
+
+                <p>
+                    I prefer learning by building real projects
+                    and applying theoretical concepts to practical
+                    problems.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Current Focus -->
+    <div class="about-focus content-card">
+
+        <p class="section-label">CURRENT FOCUS</p>
+
+        <h2>What I'm Learning</h2>
+
+        <p>
+            Currently, I am focusing on strengthening my knowledge
+            of Machine Learning, Python, Flask, databases, data
+            preprocessing, model deployment, and building complete
+            end-to-end applications.
+        </p>
+
+        <div class="focus-tags">
+
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Flask</span>
+            <span>SQL</span>
+            <span>Data Analysis</span>
+            <span>Model Deployment</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- CTA -->
+    <div class="about-cta">
+
+        <h2>Want to Know More?</h2>
+
+        <p>
+            Explore my projects, skills, education, and experience
+            to learn more about my technical journey.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('project.project') }}"
+               class="btn primary-btn">
+                View My Projects
+            </a>
+
+            <a href="{{ url_for('contact.contact') }}"
+               class="btn secondary-btn">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

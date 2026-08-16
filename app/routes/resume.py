@@ -2,9 +2,9 @@ from flask import Blueprint, render_template, redirect, request, url_for, sessio
 
 
 
-resume_bp = Blueprint('about', __name__)
+resume_bp = Blueprint('resume', __name__)
 
 
-@resume_bp.route('/about')
+@resume_bp.route('/resume')
 def resume():
     return render_template('resume.html')

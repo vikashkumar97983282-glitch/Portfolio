@@ -3,35 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} To-Do App {% endblock %}</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>{% block title %}Portfolio{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1> PLACEMENT PREDICTION </h1>
-            <nav>
-                <a href="{{url_for('home.home')}}">Home</a>
-                <a href="{{ url_for('about.about') }}">About</a>
-                <a href="{{ url_for('predict.predict') }}">Predict</a>
-                <a href="{{ url_for('content.content') }}">Content</a>
-                <a href="{{ url_for('developer.developer') }}">Developer</a>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="{{ url_for('home.home') }}" class="logo">
+                PORTFOLIO
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="{{ url_for('home.home') }}"
+                   class="{% if request.endpoint == 'home.home' %}active{% endif %}">
+                    Home
+                </a>
+
+                <a href="{{ url_for('about.about') }}"
+                   class="{% if request.endpoint == 'about.about' %}active{% endif %}">
+                    About
+                </a>
+
+                <a href="{{ url_for('education.education') }}"
+                   class="{% if request.endpoint == 'education.education' %}active{% endif %}">
+                    Education
+                </a>
+
+                <a href="{{ url_for('skill.skill') }}"
+                   class="{% if request.endpoint == 'skill.skill' %}active{% endif %}">
+                    Skills
+                </a>
+
+                <a href="{{ url_for('project.project') }}"
+                   class="{% if request.endpoint == 'project.project' %}active{% endif %}">
+                    Projects
+                </a>
+
+                <a href="{{ url_for('experience.experience') }}"
+                   class="{% if request.endpoint == 'experience.experience' %}active{% endif %}">
+                    Experience
+                </a>
+
+                <a href="{{ url_for('certi.certi') }}"
+                   class="{% if request.endpoint == 'certi.certi' %}active{% endif %}">
+                    Certificates
+                </a>
+
+                <!-- Resume Button -->
+                <a href="{{ url_for('resume.resume') }}"
+                   class="resume-btn">
+                    Resume
+                </a>
+
+                <a href="{{ url_for('contact.contact') }}"
+                   class="{% if request.endpoint == 'contact.contact' %}active{% endif %}">
+                    Contact
+                </a>
+
             </nav>
+
         </div>
+
     </header>
-    <main class="container">
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content container">
+
+        <!-- Flash Messages -->
         {% with messages = get_flashed_messages(with_categories=True) %}
-            {% for category, message in messages %}
-                <div class="flash {{category}}"> {{message}} </div>
-            {% endfor %}
+
+            {% if messages %}
+
+                {% for category, message in messages %}
+
+                    <div class="flash {{ category }}">
+                        {{ message }}
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
         {% endwith %}
 
-        {% block content %}{% endblock %}
+
+        <!-- Page Content -->
+        {% block content %}
+
+        {% endblock %}
+
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; {{2026}} Placement Prediction | Machine Learning Project</p>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-logo">
+                PORTFOLIO
+            </div>
+
+            <p>
+                &copy; Building skills, projects and opportunities through technology.
+            </p>
+
+            <div class="footer-line"></div>
+
         </div>
+
     </footer>
+
+
+    <!-- ================= MOBILE NAV SCRIPT ================= -->
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("show");
+
+        });
+
+    </script>
+
 </body>
 </html>

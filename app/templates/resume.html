@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Resume | Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="page-section resume-page">
+
+    <p class="section-label">MY RESUME</p>
+
+    <h1>Resume</h1>
+
+    <p class="resume-intro">
+        Download my resume to learn more about my education,
+        technical skills, projects, certifications, and
+        professional experience.
+    </p>
+
+    <div class="resume-card">
+
+        <div class="resume-info">
+
+            <span class="resume-label">
+                PROFESSIONAL RESUME
+            </span>
+
+            <h2>Vikash Kumar Sharma</h2>
+
+            <p>
+                Python Developer · Machine Learning Enthusiast
+                · Flask Developer
+            </p>
+
+        </div>
+
+        <div class="resume-details">
+
+            <div class="resume-detail">
+                <span>Skills</span>
+                <strong>Python · Flask · ML</strong>
+            </div>
+
+            <div class="resume-detail">
+                <span>Projects</span>
+                <strong>Placement Prediction</strong>
+            </div>
+
+            <div class="resume-detail">
+                <span>Format</span>
+                <strong>PDF</strong>
+            </div>
+
+        </div>
+
+        <div class="resume-actions">
+
+            <a href="{{ url_for('static', filename='resume/resume.pdf') }}"
+               target="_blank"
+               class="btn primary-btn">
+                View Resume →
+            </a>
+
+            <a href="{{ url_for('static', filename='resume/resume.pdf') }}"
+               download
+               class="btn secondary-btn">
+                Download PDF
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

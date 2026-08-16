@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+
+{% block title %}Education | Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="page-section education-page">
+
+    <!-- Page Header -->
+    <div class="education-header">
+
+        <p class="section-label">MY EDUCATION</p>
+
+        <h1>
+            Education & <span>Academic Journey</span>
+        </h1>
+
+        <p class="education-intro">
+            My academic journey has helped me build a strong foundation
+            in programming, computer science, problem solving, and
+            emerging technologies.
+        </p>
+
+    </div>
+
+
+    <!-- Education Timeline -->
+    <div class="education-timeline">
+
+
+        <!-- Bachelor's Degree -->
+        <div class="education-item">
+
+            <div class="education-dot"></div>
+
+            <div class="content-card education-card">
+
+                <div class="education-top">
+
+                    <div>
+                        <p class="education-year">
+                            2023 - Present
+                        </p>
+
+                        <h2>Bachelor's Degree</h2>
+
+                        <h3>
+                            Computer Science / Computer Applications
+                        </h3>
+                    </div>
+
+                    <span class="education-status">
+                        Present
+                    </span>
+
+                </div>
+
+                <p class="college-name">
+                    Your College / University Name
+                </p>
+
+                <p class="education-description">
+                    Currently pursuing my degree with a focus on
+                    programming, software development, databases,
+                    data structures, machine learning, and modern
+                    computer technologies.
+                </p>
+
+                <div class="education-details">
+
+                    <div>
+                        <strong>Specialization</strong>
+                        <span>Computer Science</span>
+                    </div>
+
+                    <div>
+                        <strong>CGPA / Percentage</strong>
+                        <span>XX.XX / XX%</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12th -->
+        <div class="education-item">
+
+            <div class="education-dot"></div>
+
+            <div class="content-card education-card">
+
+                <div class="education-top">
+
+                    <div>
+                        <p class="education-year">
+                            2021 - 2023
+                        </p>
+
+                        <h2>Higher Secondary Education</h2>
+
+                        <h3>
+                            Science / Computer Science
+                        </h3>
+                    </div>
+
+                </div>
+
+                <p class="college-name">
+                    Your School Name
+                </p>
+
+                <p class="education-description">
+                    Completed higher secondary education with a focus
+                    on science, mathematics, computer science, and
+                    developing an early interest in programming and
+                    technology.
+                </p>
+
+                <div class="education-details">
+
+                    <div>
+                        <strong>Stream</strong>
+                        <span>Science / Computer Science</span>
+                    </div>
+
+                    <div>
+                        <strong>Percentage</strong>
+                        <span>XX%</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10th -->
+        <div class="education-item">
+
+            <div class="education-dot"></div>
+
+            <div class="content-card education-card">
+
+                <div class="education-top">
+
+                    <div>
+                        <p class="education-year">
+                            2019 - 2021
+                        </p>
+
+                        <h2>Secondary Education</h2>
+
+                    </div>
+
+                </div>
+
+                <p class="college-name">
+                    Your School Name
+                </p>
+
+                <p class="education-description">
+                    Completed secondary education and developed
+                    fundamental knowledge in mathematics, science,
+                    communication, and computer fundamentals.
+                </p>
+
+                <div class="education-details">
+
+                    <div>
+                        <strong>Board</strong>
+                        <span>Your Board</span>
+                    </div>
+
+                    <div>
+                        <strong>Percentage</strong>
+                        <span>XX%</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Academic Interests -->
+    <div class="academic-section">
+
+        <p class="section-label">ACADEMIC INTERESTS</p>
+
+        <h2>Areas I Enjoy Learning</h2>
+
+        <div class="academic-grid">
+
+            <div class="content-card academic-card">
+
+                <div class="academic-icon">
+                    💻
+                </div>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Building a strong foundation in Python,
+                    programming concepts, and problem solving.
+                </p>
+
+            </div>
+
+
+            <div class="content-card academic-card">
+
+                <div class="academic-icon">
+                    🤖
+                </div>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Exploring artificial intelligence and machine
+                    learning concepts through practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="content-card academic-card">
+
+                <div class="academic-icon">
+                    📊
+                </div>
+
+                <h3>Data Science</h3>
+
+                <p>
+                    Learning how to analyze data, identify patterns,
+                    and build predictive models.
+                </p>
+
+            </div>
+
+
+            <div class="content-card academic-card">
+
+                <div class="academic-icon">
+                    🌐
+                </div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Developing web applications using technologies
+                    such as Flask, HTML, CSS, and databases.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CTA -->
+    <div class="education-cta">
+
+        <h2>Learning Never Stops</h2>
+
+        <p>
+            I continuously improve my knowledge through projects,
+            practice, online learning, and exploring new technologies.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('skill.skill') }}"
+               class="btn primary-btn">
+                View My Skills
+            </a>
+
+            <a href="{{ url_for('project.project') }}"
+               class="btn secondary-btn">
+                View Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
