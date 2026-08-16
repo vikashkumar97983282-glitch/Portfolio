@@ -4,24 +4,114 @@
 
 {% block content %}
 
-<section class="page-section">
+<section class="page-section contact-page">
 
     <p class="section-label">GET IN TOUCH</p>
 
     <h1>Contact Me</h1>
 
-    <div class="content-card">
+    <p class="contact-intro">
+        Have a project idea, opportunity, or question?
+        Feel free to get in touch. I would be happy to
+        connect and discuss it with you.
+    </p>
 
-        <h2>Let's Connect</h2>
+    <div class="contact-grid">
 
-        <p>
-            Feel free to contact me for projects,
-            opportunities or collaboration.
-        </p>
+        <!-- Contact Information -->
+        <div class="contact-card">
 
-        <p>
-            Email: your-email@example.com
-        </p>
+            <span class="contact-label">CONTACT INFORMATION</span>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                I'm always open to discussing new projects,
+                internships, opportunities, and collaborations.
+            </p>
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <span>Email</span>
+                    <a href="vikashkumar97983282@gmail.com">
+                        vikashkumar97983282@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>Location</span>
+                    <p>India</p>
+                </div>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://github.com/vikashkumar97983282-glitch" target="_blank">GitHub</a>
+
+                <a href="https://www.linkedin.com/in/vikash-kumar-sharma-85a34b288/" target="_blank">LinkedIn</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact Form -->
+        <div class="contact-card">
+
+            <span class="contact-label">SEND A MESSAGE</span>
+
+            <h2>Get In Touch</h2>
+
+            <form method="POST" action="#">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="contact-btn">
+                    Send Message →
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
 
