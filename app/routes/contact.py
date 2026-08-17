@@ -36,7 +36,7 @@ Message:
 """
         )
 
-        mail.send(msg)add
+        mail.send(msg)
 
         flash("Message sent successfully!", "success")
 
