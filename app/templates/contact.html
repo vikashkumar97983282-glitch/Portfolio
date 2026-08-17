@@ -34,7 +34,7 @@
 
                 <div class="contact-item">
                     <span>Email</span>
-                    <a href="vikashkumar97983282@gmail.com">
+                    <a href="mailto:vkalpanasharma00@gmail.com">
                         vikashkumar97983282@gmail.com
                     </a>
                 </div>
@@ -64,7 +64,8 @@
 
             <h2>Get In Touch</h2>
 
-            <form method="POST" action="#">
+            <form method="POST" action="{{ url_for('contact.contact') }}">
+                {{ form.hidden_tag() }}
 
                 <div class="form-group">
                     <label for="name">Name</label>
