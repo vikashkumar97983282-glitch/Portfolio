@@ -146,7 +146,7 @@ body {
 ========================================================= */
 
 .resume-btn {
-    background: #4da3ff;
+    /* background: #4da3ff; */
 
     color: white !important;
 
@@ -158,9 +158,11 @@ body {
 }
 
 .resume-btn:hover {
-    background: #328ee8;
+    /* background: #328ee8; */
 
-    color: white !important;
+    /* color: white !important; */
+
+    color: #4da3ff;
 
     transform: translateY(-2px);
 }
